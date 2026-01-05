@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Installation
 
-## Getting Started
+- Important! Make sure the installed Node version is >= 20.18 and of npm <= 10.8.2
 
-First, run the development server:
+## Quick start
+
+- Clone the repo: `git clone https://github.com/hectorRperez/onefit-website`
+- Make sure your Node.js and npm versions are up to date
+- Install dependencies: `npm install` or `yarn`
+- Create .env file and modify its values: `cp .env.example .env`
+- Start the server: `npm run dev` or `yarn dev`
+- Open browser: `http://localhost:3000`
+
+## Git branch conventions names
+
+Name flow example
+
+1. For news features
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+ $ feature/login-form
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. bug fix
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+ $ bugfix/fix-login-error
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. To fix critical bugs in production
 
-## Learn More
+```bash
+ $ hotfix/security-patch
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. To preparer a new version of the application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+ $ release/v2.0.1
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. For maintenance, minor updates, or changes that do not directly affect working code, such as updating dependencies, configurations, or changes to documentation files
 
-## Deploy on Vercel
+```bash
+ $ chore/update-dependencies
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6. test o tests
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Used to experiment or create tests (unit, integration) in the code
+
+```bash
+ $ test/improve-unit-tests
+```
+
+7. refactor/
+
+- Suitable when working on improving the structure of the code without changing its functionality. Ideal for cases where you want to optimize, clean or reorganize the code
+
+```bash
+ $ refactor/optimize-auth-module
+```
+
+8. config/
+
+- Useful when making changes to project configuration, such as CI/CD configurations or changes to environment configurations files
+
+```bash
+ $ config/ci-setup
+```
+
+9. perf/
+
+- Used for perfomance optimizations. Any tweaks that improve system speed or efficiency can be handled here
+
+```bash
+ $ perf/cache-optimization
+```
+
+10. docs/
+
+- For documentation-related changes. This may include adjustments to project documentation, README files, or any type of technical guide
+
+```bash
+ $ docs/update-api-reference
+```
+
+11. ci/
+
+- For continuous integration (CI) configuration changes and pipeline automation
+
+```bash
+ $ ci/github-actions-pipeline
+```
+
+## Steps to follow when creating a new issue
+
+1. Crear la rama según las reglas establecidas
+2. Crea una nueva vista en la carpeta src/app o agregar los nuevo en la vista existente
+3. Crear un nuevo componente o ajustarlo de ser necesario en la carpeta src/components
+4. Agregar al archivo .env.example las variables nuevas que se agreguen
+5. Antes de realizar el commit ejecutar el prettier:
+
+```bash
+npm run lint
+npm run format
+npm run format:check
+```

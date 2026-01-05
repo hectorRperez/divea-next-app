@@ -93,7 +93,6 @@ Name flow example
  $ ci/github-actions-pipeline
 ```
 
-
 ## Steps to follow when creating a new issue
 
 1. Crear la rama según las reglas establecidas

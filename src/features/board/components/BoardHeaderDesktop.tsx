@@ -1,0 +1,18 @@
+type Props = {
+  monthLabel: string;
+  onPrev: () => void;
+  onNext: () => void;
+};
+
+export function BoardHeaderDesktop(props: Props) {
+  return (
+    <header className="flex items-start justify-between px-8 pt-8">
+      <h1 className="text-5xl font-bold">{props.monthLabel}</h1>
+
+      <div className="flex items-center gap-3">
+        <button className="h-10 w-10 rounded-full bg-slate-900 text-white">‹</button>
+        <button className="h-10 w-10 rounded-full bg-slate-900 text-white">›</button>
+      </div>
+    </header>
+  );
+}

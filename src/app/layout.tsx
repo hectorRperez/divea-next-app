@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import localFont from "next/font/local";
+import localFont from 'next/font/local';
 
 import './globals.css';
 
@@ -34,7 +34,6 @@ export const metadata: Metadata = {
   title: 'Divea',
   description: 'Personal productivity board',
 };
-
 
 export default function RootLayout({
   children,

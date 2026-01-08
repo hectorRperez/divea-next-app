@@ -1,26 +1,17 @@
-'use client'
+'use client';
 
-import { BoardHeaderMobile } from "./BoardHeaderMobile"
-import { BoardHeaderDesktop } from "./BoardHeaderDesktop"
-
+import { BoardHeaderDesktop } from './BoardHeaderDesktop';
+import { BoardHeaderMobile } from './BoardHeaderMobile';
 
 export function BoardHeader() {
-    return (
-        <>
-            <div className="block md:hidden">
-                <BoardHeaderMobile
-                    monthLabel="Board header mobile"
-                    onPrev={()=> console.log("click")}
-                    onNext={()=> console.log("click")}
-                />
-            </div>
-            <div className="hidden md:block">
-                <BoardHeaderDesktop 
-                    monthLabel="Board header desktop"
-                    onNext={() => console.log('click')}
-                    onPrev={() => console.log('click')}
-                />
-            </div>
-        </>
-    )
+  return (
+    <>
+      <div className="block md:hidden">
+        <BoardHeaderMobile monthLabel="Board header mobile" onPrev={() => {}} onNext={() => {}} />
+      </div>
+      <div className="hidden md:block">
+        <BoardHeaderDesktop monthLabel="Board header desktop" onNext={() => {}} onPrev={() => {}} />
+      </div>
+    </>
+  );
 }

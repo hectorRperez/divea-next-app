@@ -1,1 +1,1 @@
-export * from "./components/BoadHeader";
+export * from './components/BoadHeader';

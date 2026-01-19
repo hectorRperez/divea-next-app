@@ -1,21 +1,20 @@
-type Day = {
-  label: string;
-  date: string;
+type DayColumnProps = {
+  day: {
+    date: Date;
+    shortLabel: string;
+    dayNumber: number;
+  };
 };
 
-type Props = {
-  day: Day;
-};
-
-export function DayColumn({ day }: Props) {
+export function DayColumn({ day }: DayColumnProps) {
   return (
     <div className="flex-1">
       {/* Header del día */}
       <div className="mb-4">
         <div className="flex items-baseline justify-between">
-          <span className="text-sm font-medium text-slate-400">{day.label}</span>
+          <span className="text-sm font-medium text-slate-400">{day.shortLabel}</span>
 
-          <span className="text-lg font-semibold text-black">{day.date}</span>
+          <span className="text-lg font-semibold text-black">{day.dayNumber}</span>
         </div>
 
         <div className="mt-2 h-px w-full bg-black" />

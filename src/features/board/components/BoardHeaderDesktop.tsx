@@ -6,7 +6,7 @@ type Props = {
 
 export function BoardHeaderDesktop(props: Props) {
   return (
-    <header className="flex items-start justify-between px-8 pt-8">
+    <header className="flex items-start justify-between pb-4">
       <h1 className="text-5xl font-bold">{props.monthLabel}</h1>
 
       <div className="flex items-center gap-3">

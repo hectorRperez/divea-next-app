@@ -7,16 +7,16 @@ type Props = {
   startDate: Date;
   onNext: () => void;
   onPrev: () => void;
-}
+};
 
 function getMonthLabel(date: Date) {
-  return date.toLocaleDateString('en-US',{
-    month: "long",
-    year: 'numeric'
+  return date.toLocaleDateString('en-US', {
+    month: 'long',
+    year: 'numeric',
   });
 }
 
-export function BoardHeader({startDate, onNext, onPrev}: Props) {
+export function BoardHeader({ startDate, onNext, onPrev }: Props) {
   const monthLabel = getMonthLabel(startDate);
   return (
     <>

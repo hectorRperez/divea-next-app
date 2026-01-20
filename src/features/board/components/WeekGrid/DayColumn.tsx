@@ -13,11 +13,15 @@ export function DayColumn({ day }: DayColumnProps) {
       {/* Header del día */}
       <div className="mb-4">
         <div className="flex items-baseline justify-between">
-          <span className={`text-sm font-medium opacity-50 ${day.isToday ? 'text-blue-500' : 'text-black'}`}>{day.shortLabel}</span>
-          <span className={`text-2xl font-medium ${day.isToday ? 'text-blue-500' : 'text-black'}`}>{day.dayNumber}</span>
+          <span className={`text-sm font-medium opacity-50 ${day.isToday ? 'text-blue-500' : 'text-black'}`}>
+            {day.shortLabel}
+          </span>
+          <span className={`text-2xl font-medium ${day.isToday ? 'text-blue-500' : 'text-black'}`}>
+            {day.dayNumber}
+          </span>
         </div>
 
-        <div className={`mt-2 h-px w-full ${day.isToday ? 'bg-blue-500': 'bg-black'}`} />
+        <div className={`mt-2 h-px w-full ${day.isToday ? 'bg-blue-500' : 'bg-black'}`} />
       </div>
 
       {/* Content placeholder */}

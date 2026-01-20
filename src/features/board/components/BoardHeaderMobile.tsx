@@ -10,15 +10,12 @@ export function BoardHeaderMobile(props: Props) {
       <h1 className="text-lg font-semibold text-blue-500">{props.monthLabel}</h1>
 
       <div className="flex items-center gap-2">
-        <button 
-          className="h-8 w-8 rounded-full bg-slate-900 text-white"
-          onClick={props.onPrev}
-          >
-            ‹
-          </button>
-        <button className="h-8 w-8 rounded-full bg-slate-900 text-white"
-          onClick={props.onNext}
-        >›</button>
+        <button className="h-8 w-8 rounded-full bg-slate-900 text-white" onClick={props.onPrev}>
+          ‹
+        </button>
+        <button className="h-8 w-8 rounded-full bg-slate-900 text-white" onClick={props.onNext}>
+          ›
+        </button>
       </div>
     </header>
   );

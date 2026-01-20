@@ -1,3 +1,5 @@
+import { TaskItem } from "../TaskItem/index";
+
 type DayColumnProps = {
   day: {
     date: Date;
@@ -25,10 +27,9 @@ export function DayColumn({ day }: DayColumnProps) {
       </div>
 
       {/* Content placeholder */}
-      <div className="space-y-3">
-        <div className="h-4 w-full rounded bg-slate-100" />
-        <div className="h-4 w-5/6 rounded bg-slate-100" />
-        <div className="h-4 w-4/6 rounded bg-slate-100" />
+      <div className="flex-1 space-y-3 overflow-auto pr-1">
+        <TaskItem />
+        <TaskItem />
       </div>
     </div>
   );

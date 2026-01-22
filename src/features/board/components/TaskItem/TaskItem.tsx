@@ -1,11 +1,43 @@
+import { useState } from "react";
+
 type Props = {
     placeholder?: string;
 };
 
 
 export function TaskItem({ placeholder = 'Write something...' }: Props) {
+
+    const [isEditing, setIsEditing] = useState(false);
+    const [value, setValue] = useState('');
+
+    if (!isEditing) {
+        return (
+            <div
+                onClick={() => setIsEditing(true)}
+                className="
+                    h-6
+                    w-full
+                    cursor-text
+                    border-b
+                    border-slate-200
+                    text-sm
+                    text-slate-400
+                "
+            >
+            </div>
+        );
+    }
+
     return (
-        <textarea 
+        <textarea
+            autoFocus
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onBlur={() => {
+                if (value.trim() === '') {
+                    setIsEditing(false);
+                }
+            }}
             className="
                 w-full
                 resize-none
@@ -20,7 +52,7 @@ export function TaskItem({ placeholder = 'Write something...' }: Props) {
                 focus:border-blue-500
                 focus:outline-none
                 focus:ring-1
-                focus:ring-blue-500
+                focus:ring-blue-400
             "
             rows={4}
             placeholder={placeholder}

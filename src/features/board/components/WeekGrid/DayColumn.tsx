@@ -30,6 +30,12 @@ export function DayColumn({ day }: DayColumnProps) {
       <div className="flex-1 space-y-3 overflow-auto pr-1">
         <TaskItem />
         <TaskItem />
+        <TaskItem />
+        <TaskItem />
+        <TaskItem />
+        <TaskItem />
+        <TaskItem />
+        <TaskItem />
       </div>
     </div>
   );

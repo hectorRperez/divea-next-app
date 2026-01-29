@@ -42,7 +42,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={suisseIntl.variable}>{children}</body>
+      <body className={suisseIntl.variable}>
+        {children}
+        <div id='modal-root' />
+      </body>
     </html>
   );
 }

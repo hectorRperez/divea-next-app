@@ -1,4 +1,4 @@
-import { TaskItem } from "../TaskItem/index";
+import { TaskItem } from '../TaskItem/index';
 
 type DayColumnProps = {
   day: {
